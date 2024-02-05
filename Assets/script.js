@@ -32,6 +32,8 @@ $(function () {
 
   // const currentDate = new Date().toDateString();  // She codes
 
-  const date = new Date();
-  console.log(date); // free code camp https://www.freecodecamp.org/news/javascript-get-current-date-todays-date-in-js/
+  var date = new Date();$().text('#currentDay').text(date)
+  console.log(date); 
+  // document.write(date);
+
 });
