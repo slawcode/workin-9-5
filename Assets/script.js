@@ -31,9 +31,10 @@ $(function () {
   // console.log(formattedDate); // free code camp
 
   // const currentDate = new Date().toDateString();  // She codes
-
+ 
+  // var date = document.querySelectorAll("p"); 
   var date = new Date();$().text('#currentDay').text(date)
   console.log(date); 
   // document.write(date);
 
-});
+  });
