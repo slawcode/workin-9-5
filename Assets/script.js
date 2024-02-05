@@ -3,7 +3,7 @@
 // in the html.
 var rootEl = $('#root');
 
-import dayjs from 'dayjs'
+// import dayjs from 'dayjs'
 
 $(function () {
 
@@ -26,9 +26,12 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 
-  var currentDate = dayjs();
-  var formattedDate = currentDate.format('YYYY-MM-DD HH:mm:ss');
-  console.log(formattedDate); // free code camp
+  // var currentDate = dayjs();
+  // var formattedDate = currentDate.format('YYYY-MM-DD HH:mm:ss');
+  // console.log(formattedDate); // free code camp
 
-  const currentDate = new Date().toDateString();  // She codes
+  // const currentDate = new Date().toDateString();  // She codes
+
+  const date = new Date();
+  console.log(date); // free code camp https://www.freecodecamp.org/news/javascript-get-current-date-todays-date-in-js/
 });
