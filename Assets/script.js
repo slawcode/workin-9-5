@@ -1,6 +1,18 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that the code isn't run until the browser has finished rendering all the elements in the html.
+$(document).ready(function () {
+  console.log("Workin' nine to five...");
 
-$(function () {
+const displayTime = document.querySelector("#currentDay");
+
+const currentTime = dayjs().format("dddd, MMMM D, YYY, h:mm:ss a");
+
+displayTime.textContext = currentTime;
+
+// displayText();
+
+});
+
+// $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
 
 // import dayjs from 'dayjs'
 // function displayDateAndTime() {
@@ -12,8 +24,6 @@ $(function () {
 // var todoForm = document.querySelector("#todo-form");
 // var todoList = document.querySelector("#todo-list");
 // var todoCountSpan = document.querySelector("#todo-count");
-
-
 
 
 
@@ -35,4 +45,4 @@ $(function () {
   // var currentDate = dayjs();
   // var formattedDate = currentDate.format('YYYY-MM-DD HH:mm:ss');
 
-});
+// });

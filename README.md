@@ -2,9 +2,10 @@
 A calendar application for typical 9 am to 5 pm working day
 
 ## Description
+-
 
 ## Usage
-- To use this website all that is needed is a browser and an internet connection. Once the URL is placed in the brower the website will open.
+- To use this webpage all that is needed is a browser and an internet connection. Once the URL is placed in the brower the webpage will open.
 
 - No authentications are needed to access the website.
 
