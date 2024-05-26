@@ -11,6 +11,7 @@ $(document).ready(function () {
 
 // displayTime.textContext = currentTime;
 
+// Variable created to display current date and time in HTML element
 var currentDay = $("#currentDay");
 
 // Function created to display todays date
@@ -80,6 +81,10 @@ $("#clearFieldsBtn").click(function(event) {
   $("textArea").val("");
   localStorage.clear();
 });
+
+function displayText() {
+  $("time")
+}
 
 // // Apply past, present or future class to each time block
 // function hourTracker() {
