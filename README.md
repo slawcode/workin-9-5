@@ -2,14 +2,15 @@
 A calendar application for typical 9 am to 5 pm working day
 
 ## Description
-- The motivation for this project was to create a simple calendar applicaiton that allows users to save events for each hour of a typical working day. 
-- The date and time is displayed at the top of the application and the different colors, representing different periods of time, make it easy to keep track of time and tasks. 
-- A green color block represents the future, red indicates the present and greay represents the past.
-- Additionally, I always use planners and I will utilize this application quite often, finding it especially useful since it runs in the browser.  
+- The motivation for this project was to create a simple calendar application that allows users to save tasks and/or events for each hour of a typical working day. 
+- Additionally, I always use planners and I will utilize this application quite often, finding it especially useful since it runs in the browser. 
+- The date and time is displayed at the top of the application and the different colors, representing different periods of time, make it easy to keep track of time and tasks/events. 
+- A green color block represents the future, red indicates the present and greay represents the past. 
 - This project runs in the browser using dynamically HTML, CSS and is powerted by JQuery. 
 
 ## Usage
 - To use this webpage all that is needed is a browser and an internet connection. Once the URL is placed in the brower the webpage will open.
+- The user will input text, including tasks and events, and click the save button. 
 
 - No authentications are needed to access the website.
 

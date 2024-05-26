@@ -11,8 +11,7 @@ var currentTime = dayjs().format("dddd, MMMM D, YYYY, h:mm:ss a");
 
 displayTime.textContext = currentTime;
 
-// A listener for click events added to the saveBtn
-// To save user inputs in the text area 
+// A listener for click events added to the saveBtn to save user inputs in the text area 
 $(".saveBtn").on("click", function () {
 
   var text = $(this).siblings("description").val();
