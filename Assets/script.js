@@ -33,49 +33,32 @@ $(".saveBtn").on("click", function () {
 });
 
 // Apply past, present or future class to each time block
-// function hourTracker() {
-//   var currentHour = dayjs().hour();
+function hourTracker() {
+  var currentHour = dayjs().hour();
 
-// // Loop over the time blocks  
-// $(".time-div").each(function () {
-//   var timeDiv = $(this).attr("id").split("-")[1];
-//   // console.log("Past, present and future!")
+// Loop over the time blocks  
+$(".time-div").each(function () {
+  var timeDiv = $(this).attr("id").split("-")[1];
+  // console.log("Past, present and future!")
 
-//   if (currentHour < timeDiv) {
-//     $(this).addClass("past");
-//     $(this).removeClass("future");
-//     $(this).removeClass("present");
-//   } 
-//   else if (currentHour === timeDiv) {
-//     $(this).removeClass("past");
-//     $(this).addClass("present");
-//     $(this).removeClass("future")
-//   } 
-//   else {
-//     $(this).removeClass("present");
-//     $(this).addClass("past");
-//     $(this).addClass("future");
-//   }
-//  })
-// }
-// hourTracker();
-
-
-
-
-function refreshColor() {
-  $('.time-bdiv').each(function() {
-    var blockHour = parseInt(this.id);
-    if (blockHour == currentHour) {
-      $(this).removeClass('past future').addClass('present');
-    } else if (blockHour < currentHour) {
-      $(this).removeClass('future present').addClass('past');
-    } else {
-      $(this).removeClass('past present').addClass('future');
-    }
-  });
+  if (currentHour == timeDiv) {
+    $(this).addClass("present");
+    // $(this).removeClass("future");
+    $(this).children("description").addClass("present");
+  }
+  else if (currentHour < timeDiv) {
+    $(this).removeClass("present");
+    $(this).addClass("future");
+    // $(this).removeClass("future");
+  } 
+  else if (currentHour > timeDiv) {
+    $(this).removeClass("future");
+    $(this).addClass("past");
+    // $(this).addClass("future");
+  }
+ })
 }
-refreshColor();
+hourTracker();
 
 // Retrieve data from local storage for each hour
 $("#hour-09 .description").val(localStorage.getItem("09));"));
