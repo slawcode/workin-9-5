@@ -27,18 +27,34 @@ $("#hour-14 .description").val(localStorage.getItem("14));"));
 $("#hour-15 .description").val(localStorage.getItem("15));"));
 $("#hour-16 .description").val(localStorage.getItem("16));"));
 $("#hour-17 .description").val(localStorage.getItem("17));"));
+``
+// Code to apply past, present or future class to each time block
+function hourTracker() {
+  var currentHour = dayjs().hour();
 
-$(".time-div").each(function() {
-  var timeDiv = $(this).attr("id").split("hour")[1]);
+//Loop over the time blocks  
+$(".time-div").each(function () {
+  var timeDiv = $(this).attr("id").split("hour")[1];
+  console.log("Past, present and future!")
 
-  if (currentHour) == timeDiv) {
+  if (currentHour < timeDiv) {
+    $(this).addClass("past");
+    $(this).removeClass("future");
+    $(this).removeClass("present");
+  } 
+  else if (currentHour === timeDiv) {
+    $(this).removeClass("past");
     $(this).addClass("present");
-    $(this).children(".description").addClass("present");
-  } else if (currentHour < timeDiv) {
-    $(this)
+    $(this).removeClass("future")
+  } 
+  else {
+    $(this).removeClass("present");
+    $(this).addClass("past");
+    $(this).addClass("future");
   }
-})
-
+ })
+}
+hourTracker();
 // displayText();
 
 })
