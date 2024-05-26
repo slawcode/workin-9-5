@@ -57,7 +57,16 @@ $(".time-div").each(function () {
 hourTracker();
 // displayText();
 
-})
+// Function to display text from local storage
+function displayText() {
+  console.log("Nine to five!");
+  $(".time-div").each(function () {
+    var hourBlock = $(this).attr("id");
+    $(this).children("description").val(localStorage.getItem(timeDiv));
+  });
+}
+displayText();
+});
 
 
 // TODO: Add a listener for click events on the save button. This code should use the id in the containing time-block as a key to save the user input in local storage. 
