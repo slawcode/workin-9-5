@@ -4,17 +4,17 @@ $(document).ready(function () {
   console.log("Workin' nine to five...");
 
 // Variable created to display current date and time
-var displayTime = document.querySelector("#currentDay");
+const displayTime = document.querySelector("#currentDay");
 
 // Variable created to display current date and time with dayjs
-var currentTime = dayjs().format("dddd, MMMM D, YYYY, h:mm:ss a");
+const currentTime = dayjs().format("dddd, MMMM D, YYYY, h:mm:ss a");
 
 displayTime.textContext = currentTime;
 
 // A listener for click events added to the saveBtn to save user inputs in the text area 
 $(".saveBtn").on("click", function () {
 
-  var text = $(this).siblings("description").val();
+  var text = $(this).siblings(".description").val();
   var time = $(this).parent().attr("id");
   // Save items in local storage
   localStorage.setItem(time, text);
@@ -30,7 +30,7 @@ $("#hour-14 .description").val(localStorage.getItem("14));"));
 $("#hour-15 .description").val(localStorage.getItem("15));"));
 $("#hour-16 .description").val(localStorage.getItem("16));"));
 $("#hour-17 .description").val(localStorage.getItem("17));"));
-``
+
 // Apply past, present or future class to each time block
 function hourTracker() {
   var currentHour = dayjs().hour();
@@ -38,7 +38,7 @@ function hourTracker() {
 // Loop over the time blocks  
 $(".time-div").each(function () {
   var timeDiv = $(this).attr("id").split("hour")[1];
-  console.log("Past, present and future!")
+  // console.log("Past, present and future!")
 
   if (currentHour < timeDiv) {
     $(this).addClass("past");
