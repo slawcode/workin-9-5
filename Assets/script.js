@@ -13,22 +13,27 @@ $(document).ready(function () {
 
 var currentDay = $("#currentDay");
 
-showTodaysDate();
-
-loadStoredEvents();
-
-function showTodaysDate() {
-  var currentDate = dayjs().format("dddd, MMMM D[th]");
+// Function created to display todays date
+function showDateAndTime() {
+  console.log("...what a way to make a livin'...");
+  var currentDate = dayjs().format("dddd, MMMM D[th], h:mm:ss a");
   currentDay.text(currentDate);
 }
+
+// Function call to display todays date
+showDateAndTime();
+
 // A listener for click events added to the saveBtn to save user inputs in the text area 
 $(".saveBtn").on("click", function () {
-
   var text = $(this).siblings(".description").val();
   var time = $(this).parent().attr("id");
   // Save items in local storage
-  localStorage.setItem(time, text);
+  saveToLocalStorage(time, text);
 });
+
+function saveToLocalStorage(text, time) {
+  localStorage.setItem(text, time);
+}
 
 // Apply past, present or future class to each time block
 function hourTracker() {
@@ -58,7 +63,7 @@ $(".time-div").each(function () {
 }
 hourTracker();
 
-// // Retrieve data from local storage for each hour
+// Retrieve data from local storage for each hour
 $("#hour-09 .description").val(localStorage.getItem("09));"));
 $("#hour-10 .description").val(localStorage.getItem("10));"));
 $("#hour-11 .description").val(localStorage.getItem("11));"));
@@ -105,15 +110,15 @@ $("#clearFieldsBtn").click(function(event) {
 // hourTracker();
 
 // Function to display text from local storage
-// function displayText() {
-//   console.log("What a way to make a livin'!");
-//   $(".time-div").each(function () {
-//     var timeDiv = $(this).attr("id");
-//     $(this).children("description").val(localStorage.getItem(timeDiv));
-//   });
-// }
+function displayText() {
+  console.log("...barely gettin' by...");
+  $(".time-div").each(function () {
+    var timeDiv = $(this).attr("id");
+    $(this).children("description").val(localStorage.getItem(timeDiv));
+  });
+}
 
-// displayText();
+displayText();
 
 });
 
