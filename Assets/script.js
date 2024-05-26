@@ -15,7 +15,7 @@ displayTime.textContext = currentTime;
 
 // $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
 
-// import dayjs from 'dayjs'
+
 // function displayDateAndTime() {
 //   const rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a')
 //   timeDisplayEl.text(rightNow);
@@ -32,12 +32,19 @@ displayTime.textContext = currentTime;
 // HINT: What does `this` reference in the click listener function? 
 // How can DOM traversal be used to get the "hour-x" id of the time-block containing the button that was clicked? 
 // How might the id be useful when saving the description in local storage?
+// Assigned saveBtn click listener for user input in text area
 $(".saveBtn").on("click", function () {
     const text = $(this).siblings("description").val();
     const time = $(this).parent().attr("id");
 // Save items in local storage
     localStorage.setItem(time, text);
 })
+
+// Retrieve data from local storage for each hour
+$("#hour-09 .description").val(localStorage.getItem("09));"))
+$("#hour-10 .description").val(localStorage.getItem("09));"))
+$("#hour-11 .description").val(localStorage.getItem("09));"))
+$("#hour-12 .description").val(localStorage.getItem("09));"))
 
 // TODO: Add code to apply the past, present, or future class to each time block by comparing the id to the current hour. HINTS: How can the id attribute of each time-block be used to conditionally add or remove the past, present, and future classes? 
 // How can Day.js be used to get the current hour in 24-hour time?
