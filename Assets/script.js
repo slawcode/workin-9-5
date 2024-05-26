@@ -3,14 +3,18 @@
 $(document).ready(function () {
   console.log("Workin' nine to five...");
 
+// Variable created to display current date and time
 var displayTime = document.querySelector("#currentDay");
 
-var currentTime = dayjs().format("dddd, MMMM D, YYY, h:mm:ss a");
+// Variable created to display current date and time with dayjs
+var currentTime = dayjs().format("dddd, MMMM D, YYYY, h:mm:ss a");
 
 displayTime.textContext = currentTime;
 
+// A listener for click events added to the saveBtn
+// To save user inputs in the text area 
 $(".saveBtn").on("click", function () {
-  // console.log("Save this text!");
+
   var text = $(this).siblings("description").val();
   var time = $(this).parent().attr("id");
   // Save items in local storage
@@ -28,11 +32,11 @@ $("#hour-15 .description").val(localStorage.getItem("15));"));
 $("#hour-16 .description").val(localStorage.getItem("16));"));
 $("#hour-17 .description").val(localStorage.getItem("17));"));
 ``
-// Code to apply past, present or future class to each time block
+// Apply past, present or future class to each time block
 function hourTracker() {
   var currentHour = dayjs().hour();
 
-//Loop over the time blocks  
+// Loop over the time blocks  
 $(".time-div").each(function () {
   var timeDiv = $(this).attr("id").split("hour")[1];
   console.log("Past, present and future!")
@@ -55,17 +59,18 @@ $(".time-div").each(function () {
  })
 }
 hourTracker();
-// displayText();
 
 // Function to display text from local storage
 function displayText() {
-  console.log("Nine to five!");
+  console.log("What a way to make a livin'!");
   $(".time-div").each(function () {
     var hourBlock = $(this).attr("id");
     $(this).children("description").val(localStorage.getItem(timeDiv));
   });
 }
+
 displayText();
+
 });
 
 
