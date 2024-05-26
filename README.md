@@ -1,5 +1,5 @@
 # workin-9-5
-A calendar application for typical 9 am to 5 pm working day
+A calendar application for a typical 9 am to 5 pm working day.
 
 ## Description
 - The motivation for this project was to create a simple calendar application that allows users to save tasks and/or events for each hour of a typical working day. 
@@ -8,13 +8,13 @@ A calendar application for typical 9 am to 5 pm working day
 - A green color block represents the future, red indicates the present and greay represents the past. 
 - Initially there were multiple challenges faced, especially with JavaScript to implement the date and time, moving color time blocks and local storage. 
 - As well, there were challenges with time and completing this project.
-- This project runs in the browser using dynamically HTML, CSS and is powerted by JQuery. 
+- This project runs in the browser using dynamically updated HTML and CSS and is powered by JQuery. 
 
 ## Usage
 - To use this webpage all that is needed is a browser and an internet connection. Once the URL is placed in the brower the webpage will open.
 - The user will input text, including tasks and events, and click the save button. 
 
-- No authentications are needed to access the website.
+- No authentications are needed to access the webpage.
 
 ## Credits
 
