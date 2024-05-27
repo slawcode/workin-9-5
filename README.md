@@ -6,8 +6,8 @@ A calendar application for a typical 9 am to 5 pm working day.
 - Additionally, I always use planners and I will utilize this application quite often, finding it especially useful since it runs in the browser, and eliminates the need for a physical planner. 
 - The date and time is displayed at the top of the application and the different colors, representing different periods of time, make it easy to keep track of time and tasks/events. 
 - A green color block represents the future, red indicates the present and grey represents the past. 
-- Initially there were multiple challenges faced, especially with JavaScript to implement the date and time, moving color time blocks and local storage. The local storage is still not functioning. As well, consolidating the code was difficult. 
-- There have also been many challenges with time, including code being very time-consuming to write, and completing this project.
+- There have been multiple challenges faced, including time, implementing JavaScript, the date and time, moving color time blocks and local storage. The local storage is still not functioning. As well, consolidating the code was difficult.
+- Furthermore, the date and time was displaying and the color blocks were working, however, after deployment they were not working in the live link. 
 - This project runs in the browser using dynamically updated HTML and CSS, uses Day.JS and is powered by JQuery. 
 
 ## Usage
@@ -21,7 +21,7 @@ A calendar application for a typical 9 am to 5 pm working day.
 ![Image of work day scheduler in browser showing 10 am to 5 pm grey colour blocks](.//Assets/images/screenshot2.png)
 
 - URL to the deployed application
-[x][y]
+[x]https://slawcode.github.io/workin-9-5/[y]
 
 ## License
 - There is no license for this project. 
